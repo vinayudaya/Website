@@ -16,3 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
     ? document.body.classList.add("dark")
     : document.body.classList.add("light");
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  function removeActive() {
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+  }
+
+  function setActiveNavLink() {
+    navLinks.forEach((link) => {
+      if (link.href === window.location.href) {
+        removeActive();
+        link.classList.add("active");
+      }
+    });
+  }
+
+  setActiveNavLink();
+});
