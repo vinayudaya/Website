@@ -153,6 +153,10 @@ h2 {
 .acme {
   color: var(--CARD-COLOR);
 }
+.tech-doc {
+  font-weight: bold;
+  background-color: white;
+}
 .Skills h3 {
   text-transform: uppercase;
 }
