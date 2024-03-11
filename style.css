@@ -151,7 +151,7 @@ h2 {
   margin: auto;
 }
 .acme {
-  color: var(--CARD-COLOR);
+  color: whitesmoke;
 }
 .tech-doc {
   font-weight: bold;
