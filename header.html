@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-expand-sm fixed-top fixed nav1">
       <div class="container-fluid justify-content-between">
-        <button class="nav-link d-flex" onclick="toggleTheme()">
+        <button class="nav-link d-flex themeButton" onclick="toggleTheme()">
           <img id="themeIcon" src="light-icon.svg" alt="Theme Icon" />&nbsp;Mode
         </button>
         <button
@@ -27,7 +27,11 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <div class="navbutton">
+            <span class="navbutton1"></span>
+            <span class="navbutton2"></span>
+            <span class="navbutton3"></span>
+          </div>
         </button>
         <div
           class="collapse navbar-collapse justify-content-center"

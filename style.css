@@ -1,29 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito&display=swap);
-body.dark,
-body.light {
-  --NAV-COLOR: whitesmoke;
-}
-#myCarousel,
-h2,
-nav {
-  box-shadow: 0 0 1rem var(--BOX-SHADOW-COLOR);
-}
-#Education h3,
-#Skills,
-#myCarousel .btn-primary,
-#nav1,
-.fixed,
-.nav-item,
-body,
-footer {
-  background-color: var(--BODY-BGCOLOR);
-}
-#Education h3,
-.nav-item a,
-body,
-footer {
-  color: var(--BODY-COLOR);
-}
 *,
 ::after,
 ::before {
@@ -42,205 +17,240 @@ input,
 textarea {
   font: inherit;
 }
-#Skills,
-h2 {
-  font-weight: 700;
-}
 body.light {
-  --BODY-COLOR: hsl(209, 68%, 40%);
-  --BODY-BGCOLOR: whitesmoke;
+  --BODY-COLOR: #000000;
+  --BODY-BGCOLOR: #ffd166;
   --NAV-ACTIVE: #566e3d;
-  --CAROUSEL-COLOR: #542e71;
-  --BOX-SHADOW-COLOR: #6a66a3;
-  --CARD-COLOR: whitesmoke;
-  --CAROUSEL-HOVER-BGCOLOR: BLACK;
-  --CAROUSEL-HOVER-COLOR: whitesmoke;
+  --NAV-COLOR: whitesmoke;
+  --CAROUSEL-COLOR: #678d58;
+  --CAROUSEL-HOVER-BGCOLOR: rgb(255, 0, 0);
+  --HEADER-COLOR: WHITE;
+  --HEADER-BGCOLOR: #3c096c;
+  --FOOTER-COLOR: #fff;
+  --FOOTER-BGCOLOR: #3c096c;
+  --CAROUSEL-INDICATOR: BLACK;
+  --CAROUSEL-BUTTONBGCOLOR: RED;
+  --DROP-SHADOW: BLACK;
+  --BORDER-COLOR: #566e3d;
+  --COLUMN-BGCOLOR: #24ccb8;
+  --COLUMN-COLOR: #000;
+  --COURSEWORK-COLOR: whitesmoke;
+  --COURSEWORK-BGCOLOR: #3c096c;
+  color: var(--BODY-COLOR);
+  background-color: var(--BODY-BGCOLOR);
 }
 body.dark {
-  --BODY-COLOR: #c5c5c5;
-  --BODY-BGCOLOR: #333;
-  --NAV-ACTIVE: #6a66a3;
-  --CAROUSEL-COLOR: #6a66a3;
-  --BOX-SHADOW-COLOR: #000;
-  --CAROUSEL-HOVER-BGCOLOR: #000;
-  --CAROUSEL-HOVER-COLOR: #f5f5f5;
+  --BODY-COLOR: whitesmoke;
+  --BODY-BGCOLOR: #0b2813;
+  --NAV-ACTIVE: #da0c81;
+  --NAV-COLOR: white;
+  --CAROUSEL-COLOR: #0b2813;
+  --CAROUSEL-HOVER-BGCOLOR: blue;
+  --HEADER-COLOR: #fff;
+  --HEADER-BGCOLOR: #222;
+  --FOOTER-COLOR: #fff;
+  --FOOTER-BGCOLOR: #333;
+  --CAROUSEL-INDICATOR: white;
+  --CAROUSEL-BUTTONBGCOLOR: red;
+  --DROP-SHADOW: #d5d5d5;
+  --BORDER-COLOR: rgb(183, 101, 33);
+  --COLUMN-BGCOLOR: #0b2138;
+  --COLUMN-COLOR: whitesmoke;
+  --COURSEWORK-COLOR: whitesmoke;
+  --COURSEWORK-BGCOLOR: #0b2138;
+  color: var(--BODY-COLOR);
+  background-color: var(--BODY-BGCOLOR);
 }
 body {
-  font-family: Nunito, sans-serif;
+  font-family: "Nunito", sans-serif;
   height: 100%;
 }
-body.dark img {
-  filter: invert(100%);
+
+/* INDEX.HTML */
+
+/* NAVBAR */
+nav,
+nav .container-fluid,
+header,
+.nav-link {
+  color: var(--HEADER-COLOR);
+  background-color: var(--HEADER-BGCOLOR);
 }
-h3 {
-  text-align: center;
+nav {
+  border-bottom: 2px solid black;
 }
-.justify {
-  text-align: justify;
-  text-justify: inter-word;
-}
-#Skills,
-.Skills .d-flex,
-.coursework_a,
-h2 {
-  text-align: center;
-}
-svg {
-  fill: whitesmoke;
-}
-#nav1 {
-  justify-content: space-around;
-  padding: 0.2rem;
-}
-.nav-item a:hover,
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.active:hover {
-  color: var(--NAV-COLOR);
+.active {
   background-color: var(--NAV-ACTIVE);
+  color: var(--NAV-COLOR);
 }
-.Skills h3,
-.nav-item a:active {
-  color: var(--NAV-ACTIVE);
+.nav-item .nav-link.active {
+  color: var(--HEADER-COLOR);
 }
-#myCarousel .btn-primary {
-  color: var(--BODY-COLOR);
-  border: var(--BODY-BGCOLOR);
+#navbarNavDropdown .nav-link:hover {
+  background-color: var(--NAV-ACTIVE);
+  color: var(--NAV-COLOR);
+  transform: scale(1.1);
+  transition: all 0.2s;
 }
-#myCarousel .btn-primary:hover {
-  color: var(--CAROUSEL-HOVER-COLOR);
-  background-color: var(--CAROUSEL-HOVER-BGCOLOR);
+.themeButton:hover {
+  transform: scale(1.2);
 }
-.bd-placeholder-img rect {
+.navbar-toggler,
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid var(--HEADER-BGCOLOR);
+}
+.navbutton {
+  margin-right: 1rem;
+}
+.navbutton1 {
+  position: absolute;
+  top: 0.7rem;
+  margin-top: -0.125rem;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: var(--NAV-COLOR);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.navbutton2 {
+  position: absolute;
+  top: 1.2rem;
+  margin-top: -0.125rem;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: var(--NAV-COLOR);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.navbutton3 {
+  position: absolute;
+  top: 1.7rem;
+  margin-top: -0.125rem;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: var(--NAV-COLOR);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+/* MY CAROUSEL */
+#myCarousel {
+  height: 95vh;
+}
+rect {
   fill: var(--CAROUSEL-COLOR);
 }
 .carousel-caption {
-  display: grid;
-  justify-content: center;
+  top: 40%;
 }
-.Skills .col {
-  border: 5px double var(--BOX-SHADOW-COLOR);
-  min-width: 200px;
-  width: auto;
-  max-width: 400px;
+.carousel-caption .btn-primary {
+  background-color: var(--CAROUSEL-BUTTONBGCOLOR);
+  border: 1px solid var(--CAROUSEL-BUTTONBGCOLOR);
 }
-.Skills .row {
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 1rem;
+.carousel-caption .btn-primary:hover {
+  background-color: var(--CAROUSEL-HOVER-BGCOLOR);
+  border: 1px solid var(--CAROUSEL-HOVER-BGCOLOR);
 }
-.Skills .d-flex {
-  width: 100%;
-  justify-content: center;
-  gap: 10px;
+.carousel-indicators button {
+  background-color: var(--CAROUSEL-INDICATOR) !important;
 }
-.d-flex svg {
-  width: 30;
-  height: 30;
+/* FOOTER */
+#Footer {
+  background-color: var(--FOOTER-BGCOLOR);
+  color: var(--FOOTER-COLOR);
+  border-top: 2px solid black;
 }
-.block {
-  display: block;
+#Footer li:nth-child(2) a {
+  text-decoration: none;
 }
-h2 {
+#Footer li:nth-child(2):hover {
+  transform: scale(1.3);
+}
+#github li a {
+  color: var(--FOOTER-COLOR);
+}
+
+/* GENERAL */
+.container-fluid h2 {
+  color: var(--HEADER-COLOR);
+  background-color: var(--HEADER-BGCOLOR);
+  text-align: center;
   font-size: 3rem;
+  filter: drop-shadow(0px 0px 10px var(--DROP-SHADOW));
 }
-#Projects .card:hover {
-  filter: drop-shadow(0 0 0.5em var(--BOX-SHADOW-COLOR));
+.container-fluid {
+  color: var(--BODY-COLOR);
+  background-color: var(--BODY-BGCOLOR);
 }
-.Education {
-  margin: auto;
+
+/* PROJECTS.HTML */
+#Projects {
+  background-color: var(--BODY-BGCOLOR);
+  color: var(--BODY-COLOR);
 }
 .acme {
-  color: whitesmoke;
+  color: var(--NAV-COLOR);
 }
-.tech-doc {
-  font-weight: bold;
-  background-color: white;
+/* SKILLS.HTML */
+.container-fluid .Skills {
+  margin-bottom: 100px;
 }
-.Skills h3 {
-  text-transform: uppercase;
-}
-.coursework_a {
-  padding: auto;
-  margin: auto;
+.Skills .row {
+  column-gap: 20px;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+}
+
+.Skills .col.align-items-start {
+  background-color: var(--COLUMN-BGCOLOR);
+  color: var(--COLUMN-COLOR);
+  border: 10px solid var(--BORDER-COLOR);
+  max-width: 400px;
+  min-width: 300px;
+  max-height: 200px;
+  min-height: 150px;
+}
+
+/* EDUCATION.HTML */
+#Education .Education {
+  background-color: var(--COLUMN-BGCOLOR);
+  color: var(--COLUMN-COLOR);
+  border: 10px solid var(--BORDER-COLOR);
+  margin: auto;
 }
 #Education h3 {
-  margin: 0;
+  color: var(--COLUMN-COLOR);
 }
-footer {
-  border-top: solid var(--BOX-SHADOW-COLOR);
+
+/* COURSEWORK.HTML */
+#Coursework {
+  height: 95vh;
 }
-#Coursework a:hover {
+#hanging-icons a {
+  color: var(--COURSEWORK-COLOR);
+}
+#hanging-icons .Coursework_a a:hover {
+  display: block;
   text-decoration: none;
-  color: var(--BODY-BGCOLOR);
-  background-color: var(--BODY-COLOR);
+  transform: scale(1.1);
 }
-#express svg,
-#github svg {
-  fill: var(--BODY-COLOR);
+#Coursework .row {
+  justify-content: center;
 }
-@media (min-width: 1440px) {
-  .Skills .row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin: auto;
-  }
+.Coursework_a {
+  background-color: var(--COURSEWORK-BGCOLOR);
+  color: var(--COURSEWORK-COLOR);
+  border: 5px solid var(--BORDER-COLOR);
+  min-height: 200px;
+  max-width: 500px;
+  justify-content: center;
 }
-@media (max-width: 1024px) {
-  .Skills .row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: auto;
-  }
-}
-@media (max-width: 768px) {
-  .Skills .row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-  }
-}
-@media (max-width: 493px) {
-  #nav1 .nav-link {
-    padding: 1vh;
-  }
-}
-@media (max-width: 476px) {
-  .Skills .col {
-    border: 5px double var(--BOX-SHADOW-COLOR);
-    width: 100%;
-  }
-  .Skills .row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: auto;
-  }
-  #nav1,
-  .fixed {
-    padding: 0;
-  }
-  #nav1 .nav-link {
-    padding: 1vh;
-    font-size: 0.9rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  #Education h3 {
-    background-color: var(--BODY-BGCOLOR);
-    margin: 0;
-    color: var(--BODY-COLOR);
-  }
-}
-@media (max-width: 359px) {
-  html {
-    font-size: 0.7rem;
-  }
+.Coursework_a h3 {
+  font-size: 2rem;
 }
