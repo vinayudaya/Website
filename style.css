@@ -23,7 +23,7 @@ body.light {
   --NAV-ACTIVE: #566e3d;
   --NAV-COLOR: whitesmoke;
   --CAROUSEL-COLOR: #678d58;
-  --CAROUSEL-HOVER-BGCOLOR: rgb(255, 0, 0);
+  --CAROUSEL-HOVER-BGCOLOR: #3c096c;
   --HEADER-COLOR: WHITE;
   --HEADER-BGCOLOR: #3c096c;
   --FOOTER-COLOR: #fff;
@@ -36,6 +36,7 @@ body.light {
   --COLUMN-COLOR: #000;
   --COURSEWORK-COLOR: whitesmoke;
   --COURSEWORK-BGCOLOR: #3c096c;
+  --TAILWIND-COLOR: WHITE;
   color: var(--BODY-COLOR);
   background-color: var(--BODY-BGCOLOR);
 }
@@ -58,6 +59,7 @@ body.dark {
   --COLUMN-COLOR: whitesmoke;
   --COURSEWORK-COLOR: whitesmoke;
   --COURSEWORK-BGCOLOR: #0b2138;
+  --TAILWIND-COLOR: var(--COLUMN-BGCOLOR);
   color: var(--BODY-COLOR);
   background-color: var(--BODY-BGCOLOR);
 }
@@ -67,7 +69,6 @@ body {
 }
 
 /* INDEX.HTML */
-
 /* NAVBAR */
 nav,
 nav .container-fluid,
@@ -216,7 +217,9 @@ rect {
   max-height: 200px;
   min-height: 150px;
 }
-
+.bg-tailwind {
+  background-color: var(--TAILWIND-COLOR);
+}
 /* EDUCATION.HTML */
 #Education .Education {
   background-color: var(--COLUMN-BGCOLOR);
