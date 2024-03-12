@@ -254,3 +254,11 @@ rect {
 .Coursework_a h3 {
   font-size: 2rem;
 }
+/* MEDIA QUERIES */
+@media (max-width: 576px) {
+  /* NAVBAR */
+  #navbarNavDropdown .nav-link:hover {
+    transform: scale(1);
+    transition: all 0.2s;
+  }
+}
